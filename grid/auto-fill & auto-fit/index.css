@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  padding: 3em;
+  grid-gap: 2em;
+  /*grid-template-columns: repeat(4, minmax(250px, 1fr));  4 colunas como tamanho minimo 250px e crescendo de acordo com o tamanho da telas mas mantendo as 4 colunas*/
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* numero de coluna varia como tamanho da tela. Quando a tela diminui o número de colunas diminui uma a uma,e o número de linhas aumenta na mesma proporção, de modo que ao final o tamanho mínimo sempre é preservado até haver apenas uma coluna de 250px*/
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Nesse caso colunas fantasmas de 250px são sempre garantidas no espaço que sobra na tela, logo as colunas não expandem ao máximo, pois o expaço sempre deve ser preenchido por colunas de 250px, mesmo que não exista conteudo */
+  /* firefox -> inspector */
+ 
+};
+
+
+.card p {
+ 
+}
+
+.card {
+    padding: 2em;
+    border-radius: .3em;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* @media  (min-width: 550px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
